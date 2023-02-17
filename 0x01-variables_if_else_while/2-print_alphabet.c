@@ -9,7 +9,8 @@
 
 int main(void)
 {
-	for (int c = 'A'; c <= 'Z'; c++)
+	int c;
+	for (c = 'A'; c <= 'Z'; c++)
 	{
 		putchar(tolower(c));
 	}
