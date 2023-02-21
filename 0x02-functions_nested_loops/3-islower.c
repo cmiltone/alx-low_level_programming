@@ -3,7 +3,7 @@
  *
  * @c: - int
  *
- * return: returns 0 if lowercase  or 1 if uppercase
+ * Return: returns 0 if lowercase  or 1 if uppercase
  *
  */
 
