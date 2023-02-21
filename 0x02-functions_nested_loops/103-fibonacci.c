@@ -10,6 +10,7 @@ int main(void)
 {
 	int n;
 	long int a[34];
+	long int sum = 0;
 
 	a[0] = 0;
 	a[1] = 1;
@@ -17,11 +18,9 @@ int main(void)
 	for (n = 2; n <= 33; n++)
 	{
 		a[n] = a[n - 1] + a[n - 2];
-
-		if (n < 33)
-			printf("%ld, ", a[n]);
-		else
-			printf("%ld\n", a[n]);
+		if (a[n] % 2 == 0)
+			sum += a[n];
 	}
+	printf("%ld\n", sum);
 	return (0);
 }
