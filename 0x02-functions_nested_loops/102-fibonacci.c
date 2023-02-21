@@ -9,9 +9,9 @@
 int main(void)
 {
 	int n;
-	int a[51];
+	long int a[52];
 
-	for (n = 1; n <= 50; n++)
+	for (n = 1; n <= 51; n++)
 	{
 		if (n == 1)
 		{
@@ -21,10 +21,10 @@ int main(void)
 		{
 			a[n] = a[n - 1] + a[n - 2];
 		}
-		if (n < 50)
-			printf("%d, ", a[n]);
+		if (n < 51)
+			printf("%ld, ", a[n]);
 		else
-			printf("%d\n", a[n]);
+			printf("%ld\n", a[n]);
 	}
 	return (0);
 }
