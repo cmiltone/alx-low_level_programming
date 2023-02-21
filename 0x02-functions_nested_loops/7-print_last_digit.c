@@ -16,7 +16,7 @@ int print_last_digit(int n)
 	char buff[80];
 	int len;
 	unsigned int k = n < 0 ? UINT_MAX - ((unsigned int)(n)) + 1U
-                           : (unsigned int)(n);
+		: (unsigned int)(n);
 
 	l = k % 10;
 	len = sprintf(buff, "%d", l);
