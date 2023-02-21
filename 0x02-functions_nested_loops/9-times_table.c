@@ -21,7 +21,7 @@ void times_table(void)
 	{
 		for (j = 0; j <= 9; j++)
 		{
-			if (i * j < 10)
+			if (j > 0 && i * j < 10)
 			{
 				write(1, &space, 1);
 			}
