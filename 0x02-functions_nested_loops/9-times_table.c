@@ -33,6 +33,9 @@ void times_table(void)
 				write(1, &space, 1);
 			}
 		}
-		write(1, &newline, 1);
+		if (j < 9)
+		{
+			write(1, &newline, 1);
+		}
 	}
 }
