@@ -3,10 +3,10 @@
 /**
  * main - Entry point
  *
- * Return: void
+ * Return: Always 0
  */
 
-void main(void)
+int main(void)
 {
 	int i;
 	int sum = 0;
@@ -20,4 +20,5 @@ void main(void)
 	}
 
 	printf("%d\n", sum);
+	return (0);
 }
