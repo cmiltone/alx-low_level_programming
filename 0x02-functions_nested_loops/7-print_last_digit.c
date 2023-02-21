@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <stdio.h>
 
 /**
  * print_last_digit - prints last digit of a number
@@ -11,16 +12,18 @@
 int print_last_digit(int n)
 {
 	int l;
+	char buff[80];
+	int len;
 
 	if (n >= 0)
 	{
 		l = n % 10;
-		write(1, &l, 1);
 	} else if (n < 0)
 	{
 		l = (n * -1) % 10;
-		printf("%d", l);
 	}
+	len = sprintf(buff, "%d", l);
+	write(1, buff, len);
 
 	return (l);
 }
