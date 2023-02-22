@@ -1,14 +1,14 @@
-#include <stdio.h> 
+#include <stdio.h>
 
 /**
  * fibonacci - prints fibonacci sequence
  *
  * @n: the number
  *
- * Return: int
+ * Return: void
  */
 
-int fibonacci(int n)
+void fibonacci(int n)
 {
 	static unsigned long int a = 0, b = 1;
 	unsigned long int c;
