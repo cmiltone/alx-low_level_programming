@@ -25,18 +25,18 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			if (j > 0 && i *j < 100)
+			if (j > 0 && i * j < 100)
 			{
-				if (i *j < 10)
+				if (i * j < 10)
 				{
 					write(1, &space, 1);
 					write(1, &space, 1);
-				} else 
+				} else
 				{
 					write(1, &space, 1);
 				}
 			}
-			len = sprintf(buff, "%d", i *j);
+			len = sprintf(buff, "%d", i * j);
 			write(1, buff, len);
 			if (j < n)
 			{
