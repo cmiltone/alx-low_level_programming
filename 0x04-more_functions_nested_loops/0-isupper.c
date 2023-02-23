@@ -1,5 +1,5 @@
 /**
- * _isupperer - checks if charter is uppercase
+ * _isupper - checks if charter is uppercase
  *
  * @c: - int
  *
