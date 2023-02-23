@@ -3,7 +3,7 @@
  *
  * @c: - int
  *
- * Return: returns 0 if lowercase  or 1 if uppercase
+ * Return: returns 1 if uppercase or 0 otherwise
  *
  */
 
@@ -12,7 +12,7 @@ int _isupper(int c)
 	if (c >= 65 && c <= 90)
 	{
 		return (1);
-	} else if (c >= 97 && c <= 122)
+	} else
 	{
 		return (0);
 	}
