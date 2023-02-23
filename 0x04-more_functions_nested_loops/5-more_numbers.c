@@ -18,7 +18,7 @@ void more_numbers(void)
 	{
 		for (k = 0; k <= 14; k++)
 		{
-			len = sprintf(buff, "%d", n);
+			len = sprintf(buff, "%d", k);
 			write(1, buff, len);
 		}
 
