@@ -2,10 +2,10 @@
 /**
  * main - fizzbuzz
  *
- * Return: void
+ * Return: int
  */
 
-void main(void)
+int main(void)
 {
 	int k;
 
@@ -23,4 +23,5 @@ void main(void)
 			printf(" ");
 	}
 	printf("\n");
+	return (0);
 }
