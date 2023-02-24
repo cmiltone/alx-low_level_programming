@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 /**
  * print_number - prints a number
  *
@@ -10,9 +9,22 @@
 
 void print_number(int n)
 {
-	int len;
-	char buff[80];
+	int c, d, neg;
 
-	len = sprintf(buff, "%d", n);
-	write(1, buff, len);
+	if (n < 0)
+	{
+		n *= -1;
+		neg = '-';
+		write(1, &neg, 1);
+	}
+
+	if (n > 9)
+	{
+		d = n / 10;
+		n -= 10 * d;
+
+		print_number(d);
+	}
+	c = '0' + n;
+	write(1, &c, 1);
 }
