@@ -1,4 +1,3 @@
-#include <unistd.h>
 /**
  * print_number - prints a number
  *
@@ -14,8 +13,7 @@ void print_number(int n)
 	if (n < 0)
 	{
 		n *= -1;
-		neg = '-';
-		write(1, &neg, 1);
+		_putchar('-');
 	}
 
 	if (n > 9)
@@ -25,6 +23,5 @@ void print_number(int n)
 
 		print_number(d);
 	}
-	c = '0' + n;
-	write(1, &c, 1);
+	_putchar('0' + n);
 }
