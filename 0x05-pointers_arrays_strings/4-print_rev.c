@@ -14,7 +14,7 @@ void print_rev(char *s)
 	char c;
 	int newline = '\n';
 
-	for (i = len; i >= 0; i--)
+	for (i = len - 1; i >= 0; i--)
 	{
 		c = s[i];
 		write(1, &c, 1);
