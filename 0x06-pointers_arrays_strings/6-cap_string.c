@@ -23,7 +23,7 @@ char *cap_string(char *s)
 		{
 			if (c >= 97 && i <= 122)
 			{
-				s2[i] = s[i] - diff ;
+				s2[i] = s[i] - diff;
 			} else
 			{
 				s2[i] = s[i];
