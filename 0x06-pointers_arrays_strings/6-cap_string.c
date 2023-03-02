@@ -1,6 +1,5 @@
 #include <string.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * cap_string - capitalize string
@@ -24,18 +23,17 @@ char *cap_string(char *s)
 		{
 			if (c >= 97 && i <= 122)
 			{
-				s2[i] = s[i] - diff;
+				s2[i] = s[i] - diff ;
 			} else
 			{
 				s2[i] = s[i];
 			}
-			printf("s: %s\n", s2);
 		} else
 		{
 			s2[i] = s[i];
 		}
 	}
-	printf("%s\n", s2);
+
 	strcpy(s, s2);
 
 	return (s);
