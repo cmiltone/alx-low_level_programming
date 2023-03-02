@@ -19,7 +19,7 @@ char *string_toupper(char *s)
 	{
 		c = s[i];
 
-		if (c >= 97 && i <= 122)
+		if (c >= 97 && c <= 122)
 		{
 			s2[i] = s[i] - diff;
 		} else
