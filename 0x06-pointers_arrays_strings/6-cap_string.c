@@ -15,7 +15,7 @@ char *cap_string(char *s)
 	int i, len = strlen(s), diff = 32;
 	char *s2;
 	char c;
-	
+
 	s2 = malloc(len * sizeof(char));
 
 	c = s[0];
