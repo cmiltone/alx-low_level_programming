@@ -12,7 +12,7 @@
 char *leet(char *s)
 {
 	int n = strlen(s), i, c;
-	char *s2 = malloc(n * sizeof(char));
+	char *s2;
 	int arr[120] = { 0 };
 
 	arr[65] = arr[97] = 4;
@@ -21,15 +21,13 @@ char *leet(char *s)
 	arr[84] = arr[116] = 7;
 	arr[76] = arr[108] = 1;
 
+	s2 = s;
 	for (i = 0; i < n; i++)
 	{
 		c = s[i];
 		if (arr[c] != 0)
 		{
 			s2[i] = arr[c] + '0';
-		} else
-		{
-			s2[i] = c;
 		}
 	}
 
