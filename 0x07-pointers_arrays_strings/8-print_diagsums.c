@@ -14,12 +14,6 @@
 
 void print_diagsums(int *a, int size)
 {
-	/*int *arr = malloc(size * size * sizeof(int));*/
-	int sum = 0, i, j;
-	char comma = ',';
-	char space = ' ';
-	/*char num;*/
-
 	for (i = 0; i < size; i++)
 	{
 		for (j = 0; j < size; j++)
@@ -30,9 +24,6 @@ void print_diagsums(int *a, int size)
 			}
 		}
 	}
-
-	/*num = sum + '0';
-	write(1, &num, 1);*/
 	printf("%d, ", sum);
 	write(1, &comma, 1);
 	write(1, &space, 1);
@@ -49,8 +40,5 @@ void print_diagsums(int *a, int size)
 			}
 		}
 	}
-
-	/*num = sum + '0';
-	write(1, &num, 1);*/
 	printf("%d\n", sum);
 }
