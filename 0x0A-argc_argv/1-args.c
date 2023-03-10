@@ -3,8 +3,8 @@
 /**
  * main - entry point
  *
- * @argc - number of arguments
- * @argv - array or arguments
+ * @argc: number of arguments
+ * @argv: array or arguments
  *
  * Return: always zero
  */
