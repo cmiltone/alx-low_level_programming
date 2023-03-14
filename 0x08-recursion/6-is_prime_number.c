@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * is_prime_number - returns 1 if a number is prime or 0 otherwise
  *
@@ -10,22 +12,26 @@ int is_prime_number(int n)
 {
 	if (g == -1)
 	{
-		g = n / 2;
+		g = n - 1;
 	}
+	if (n < 2)
+	{
+		g = -1;
+		return (0);
+	}
+
 	if (g == 1)
 	{
+		g = -1;
 		return (1);
-	} else
-	{
-		if (n % g == 0)
-		{
-			return (0);
-		} else
-		{
-			g -= 1;
-			is_prime_number(n);
-		}
 	}
+	if (n % g == 1)
+	{
+		g = -1;
+		return (0);
+	}
+
+	g -= 1;
 	
-	return (1);
+	return (is_prime_number(n));
 }
