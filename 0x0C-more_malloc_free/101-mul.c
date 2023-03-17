@@ -4,8 +4,8 @@
 
 /**
  * main - entry point
- * @n: number of arguments
- * @arr: array of values
+ * @argc: number of arguments
+ * @argv: array of values
  *
  * Return: void
  */
