@@ -9,9 +9,7 @@
 
 void print_char(char c);
 void print_error(void);
-void _print_int(int n);
-char *int_to_string(int n);
-char *str_rev(char *str);
+void _print_int(unsigned long int n);
 
 #endif
 /**
@@ -64,68 +62,25 @@ void print_error(void)
 }
 
 /**
- * int_to_string - converts integer to string
- * @n: integer
- * Return: string
- */
-
-char *int_to_string(int n)
-{
-	int i, sign;
-	char *s;
-
-	s = malloc(n * sizeof(char));
-	if (s == NULL)
-		return ("");
-
-	sign = n;
-	if (sign < 0)
-		n = -n;
-	i = 0;
-	do {
-		s[i++] = n % 10 + '0';
-	} while ((n /= 10) > 0);
-	if (sign < 0)
-		s[i++] = '-';
-	s[i] = '\0';
-	str_rev(s);
-	return (s);
-}
-
-/**
  * _print_int - prints integer
  * @n: integer
  * Return: void
  */
 
-void _print_int(int n)
+void _print_int(unsigned long int n)
 {
-	char *s = int_to_string(n);
-	int i, l = strlen(s);
-
-	for (i = 0; i < l; i++)
+	char *digits = (char*)malloc(sizeof(char) * 20);
+	int i = 0;
+	
+	while (n != 0)
 	{
-		print_char(s[i]);
+		int digit = n % 10;
+		digits[i++] = digit + '0';
+		n /= 10;
 	}
-}
-
-/**
- * str_rev - reverse string
- * @str: the string
- * Return: string
-*/
-
-char *str_rev(char *str)
-{
-	char *p1, *p2;
-
-	if (!str || !*str)
-	return (str);
-	for (p1 = str, p2 = str + strlen(str) - 1; p2 > p1; ++p1, --p2)
+	while (i > 0)
 	{
-		*p1 ^= *p2;
-		*p2 ^= *p1;
-		*p1 ^= *p2;
+		print_char(digits[--i]);
 	}
-	return (str);
+	free(digits);
 }
