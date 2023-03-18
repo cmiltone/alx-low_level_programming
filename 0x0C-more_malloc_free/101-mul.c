@@ -11,7 +11,7 @@ void print_char(char c);
 void print_error(void);
 void _print_int(int n);
 char *int_to_string(int n);
-char *strrev(char *str);
+char *str_rev(char *str);
 
 #endif
 /**
@@ -88,12 +88,12 @@ char *int_to_string(int n)
 	if (sign < 0)
 		s[i++] = '-';
 	s[i] = '\0';
-	strrev(s);
+	str_rev(s);
 	return (s);
 }
 
 /**
- * print_int - prints integer
+ * _print_int - prints integer
  * @n: integer
  * Return: void
  */
@@ -110,12 +110,12 @@ void _print_int(int n)
 }
 
 /**
- * strrev - reverse string
- * @str - the string
+ * str_rev - reverse string
+ * @str: the string
  * Return: string
 */
 
-char *strrev(char *str)
+char *str_rev(char *str)
 {
 	char *p1, *p2;
 
