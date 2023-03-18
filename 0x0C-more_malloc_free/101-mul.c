@@ -8,7 +8,7 @@
 #define MAIN_H
 
 void print_char(char c);
-void print_error();
+void print_error(void);
 void _print_int(int n);
 char *int_to_string(int n);
 char *strrev(char *str);
@@ -53,7 +53,7 @@ void print_char(char c)
  * print_error - prints error string
  * Return: void
  */
-void print_error()
+void print_error(void)
 {
 	print_char('E');
 	print_char('r');
@@ -77,12 +77,12 @@ char *int_to_string(int n)
 	s = malloc(n * sizeof(char));
 	if (s == NULL)
 		return ("");
-	
-	if ((sign = n) < 0)
+
+	sign = n;
+	if (sign < 0)
 		n = -n;
 	i = 0;
-	do
-	{ 
+	do {
 		s[i++] = n % 10 + '0';
 	} while ((n /= 10) > 0);
 	if (sign < 0)
@@ -109,7 +109,7 @@ void _print_int(int n)
 	}
 }
 
-/**\
+/**
  * strrev - reverse string
  * @str - the string
  * Return: string
@@ -118,8 +118,8 @@ void _print_int(int n)
 char *strrev(char *str)
 {
 	char *p1, *p2;
-	
-	if (! str || ! *str)
+
+	if (!str || !*str)
 	return (str);
 	for (p1 = str, p2 = str + strlen(str) - 1; p2 > p1; ++p1, --p2)
 	{
