@@ -1,5 +1,5 @@
-#IFNDEF
+#ifdef
 
 #define PI 3.14159265359
 
-#ENDIF
+#endif
