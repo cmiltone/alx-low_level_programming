@@ -4,7 +4,7 @@
 /**
 * dog_t  - creates a new dog instance and returns it
 * @name: name of dog,
-* @age: age, 
+* @age: age,
 * @owner: owner
 * Return: dog instance
 */
