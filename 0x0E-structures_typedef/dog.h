@@ -1,6 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
-
+/**
+ * struct dog - has name, age and owner
+ * @name: First member
+ * @age: Second member
+ * @owner: Third member
+ *
+ */
 struct dog
 {
 	char *name;
