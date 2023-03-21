@@ -2,7 +2,7 @@
 #include "dog.h"
 
 /**
-* dog_t  - creates a new dog instance and returns it
+* new_dog  - creates a new dog instance and returns it
 * @name: name of dog,
 * @age: age,
 * @owner: owner
