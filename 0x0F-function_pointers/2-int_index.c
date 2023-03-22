@@ -2,7 +2,7 @@
  * int_index - searches an integer
  * @array: the hay
  * @size: number of elements in the array
- * @comp: pointer to a function for comparison
+ * @cmp: pointer to a function for comparison
  * Return: the needle
 */
 
@@ -12,9 +12,6 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	if (size <= 0)
 		return (return_int);
-
-	if (array == NULL || cmp == NULL)
-		return (-1);
 
 	for (i = 0; i < size; i++)
 	{
