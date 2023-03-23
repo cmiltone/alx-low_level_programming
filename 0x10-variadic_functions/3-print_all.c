@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 		if (*frmt != '\0' && (*frmt == 'c' || *frmt == 'i'
 			|| *frmt == 'f' || *frmt == 's'))
 			printf(", ");
-		printf("\n");
 	}
+	printf("\n");
 	va_end(ap);
 }
