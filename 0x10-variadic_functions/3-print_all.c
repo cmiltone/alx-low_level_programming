@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	int d;
 	float f;
-	char c, *s, *frmt = (char *)format; 
+	char c, *s, *frmt = (char *)format;
 
 	va_start(ap, format);
 	while (*frmt)
@@ -34,7 +34,6 @@ void print_all(const char * const format, ...)
 			s = va_arg(ap, char *);
 			printf("%s", s);
 			break;
-		
 		default:
 			break;
 		}
@@ -42,5 +41,4 @@ void print_all(const char * const format, ...)
 			|| *frmt == 'f' || *frmt == 's'))
 			printf(", ");
 	}
-	
 }
