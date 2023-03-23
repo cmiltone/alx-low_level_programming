@@ -41,4 +41,5 @@ void print_all(const char * const format, ...)
 			|| *frmt == 'f' || *frmt == 's'))
 			printf(", ");
 	}
+	va_end(ap);
 }
