@@ -6,7 +6,6 @@
  * print_numbers - prints integers
  * @separator: character
  * @n: int, number of integers
- * Return: integer, the sum
 */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
