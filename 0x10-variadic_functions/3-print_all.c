@@ -34,7 +34,6 @@ void print_all(const char * const format, ...)
 			s = va_arg(ap, char *);
 			if (s == NULL)
 				s = "(nil)";
-			else
 			printf("%s", s);
 			break;
 		default:
