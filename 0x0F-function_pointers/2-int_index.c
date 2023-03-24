@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 /**
  * int_index - searches an integer
  * @array: the hay
