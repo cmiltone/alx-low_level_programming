@@ -1,59 +1,32 @@
-/**
- * op_add - adds two integers
- * @a: first integer
- * @b: second integer
- *
- * Return: integer
-*/
-int op_add(int a, int b)
-{
-	return (a + b);
-}
+#include <stddef.h>
+#include "function_pointers.h"
+#include "3-calc.h"
+#include "string.h"
 
 /**
- * op_sub - does subtraction
- * @a: integer
- * @b: integer
+ * get_op_func - gets operation function
+ * @s: string
  *
- * Return: integer
+ * Return: int
 */
-int op_sub(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
-	return (a - b);
-}
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
+	int i;
 
-/**
- * op_mul - does multiplication
- * @a: integer
- * @b: integer
- *
- * Return: integer
-*/
-int op_mul(int a, int b)
-{
-	return (a * b);
-}
+	while (i < 5)
+	{
+		if (strcmp(ops[i].op, s) == 0)
+			return (ops[i].f);
+		i++;
+	}
 
-/**
- * op_div - does division
- * @a: integer
- * @b: integer
- *
- * Return: integer
-*/
-int op_div(int a, int b)
-{
-	return (a / b);
-}
-
-/**
- * op_mod - returns remainder of division of a by b
- * @a: integer
- * @b: integer
- *
- * Return: integer
-*/
-int op_mod(int a, int b)
-{
-	return (a % b);
+	return (NULL);
 }
