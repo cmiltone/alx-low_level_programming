@@ -5,9 +5,8 @@
 
 /**
  * get_op_func - gets operation function
- * @a: int
- * @b: int
- * 
+ * @s: string
+ *
  * Return: int
 */
 int (*get_op_func(char *s))(int, int)
