@@ -1,6 +1,7 @@
 #include <stddef.h>
 #include "function_pointers.h"
 #include "3-calc.h"
+#include "string.h"
 
 /**
  * get_op_func - gets operation function
@@ -23,7 +24,7 @@ int (*get_op_func(char *s))(int, int)
 
 	for (i = 0; i < 5; i++)
 	{
-		if (ops[i].op == s)
+		if (strcmp(ops[i].op, s) == 0)
 			return (ops[i].f);
 	}
 

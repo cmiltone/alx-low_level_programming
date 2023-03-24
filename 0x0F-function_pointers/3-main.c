@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "function_pointers.h"
+#include "3-calc.h"
 
 /**
  * main - entry point
@@ -20,11 +20,10 @@ int main(int argc, char *argv[])
 		printf("Error %d\n", argc);
 		exit(98);
 	}
-	printf("%s \n", argv[2]);
 
-	if (strcmp(argv[2], "+") || strcmp(argv[2], "-") || strcmp(argv[2], "*") || strcmp(argv[2], "%"))
+	if (strcmp(argv[2], "+") == 0 || strcmp(argv[2], "-") == 0 || strcmp(argv[2], "*") == 0 || strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0)
 	{
-		if ((strcmp(argv[2], "-") || strcmp(argv[2], "%")) && atoi(argv[3]) == 0)
+		if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) && atoi(argv[3]) == 0)
 		{
 			printf("Error\n");
 			exit(100);
