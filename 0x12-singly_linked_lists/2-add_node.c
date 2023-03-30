@@ -4,6 +4,7 @@
 /**
  * add_node - adds element to begining of a list
  * @head: the list's head
+ * @str: string
  * Return: list
 */
 
