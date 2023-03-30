@@ -1,16 +1,16 @@
-section .data
-    msg db "Hello, Holberton\n",10
-
 section .text
-    global _start
+	global main
 
-_start:
-    mov rax, 1
-    mov rdi, 1
-    mov rsi, msg
-    mov rdx, 13
-    syscall
-    
-    mov rax, 60
-    mov rdi, 0
-    syscall
+main:
+	mov edx, len
+	mov ecx, msg
+	mov ebx, 1
+	mov eax, 4
+	int 0x80
+
+	mov eax, 1
+	int 0x080
+
+section .data
+	msg db "Hello, Holberton",10
+	len equ $ -msg
