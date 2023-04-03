@@ -4,7 +4,7 @@
 /**
  * add_nodeint - adds element to begining of a list
  * @head: the list's head
- * @str: string
+ * @n: string
  * Return: list
 */
 
