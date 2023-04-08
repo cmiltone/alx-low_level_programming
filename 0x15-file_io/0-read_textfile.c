@@ -3,7 +3,6 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <string.h>
-#include "main.h"
 
 /**
  * read_textfile - read and print file
