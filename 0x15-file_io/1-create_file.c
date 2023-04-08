@@ -3,8 +3,6 @@
 #include <unistd.h>
 #include <string.h>
 
-#include <stdio.h>
-
 /**
  * create_file - creates a file
  * @filename: file name,
