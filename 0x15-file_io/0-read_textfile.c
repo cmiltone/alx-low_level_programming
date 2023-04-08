@@ -6,6 +6,9 @@
 
 /**
  * read_textfile - read and print file
+ * @filename: the name of the input file
+ * @letters: number of characters to read
+ * Return: integer, number of characters read
 */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -34,6 +37,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		write(1, &c[n], 1);
 		n += 1;
 	}
-	
+
 	return (n);
 }
