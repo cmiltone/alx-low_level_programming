@@ -7,5 +7,7 @@ int get_bit(unsigned long int n, unsigned int index);
 int set_bit(unsigned long int *n, unsigned int index);
 void str_rev(char *s);
 int clear_bit(unsigned long int *n, unsigned int index);
+unsigned int count_bits(int num);
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
 #endif
