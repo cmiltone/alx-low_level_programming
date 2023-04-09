@@ -14,7 +14,7 @@ unsigned int count_bits(int num)
 		count += 1;
 		num &= (num - 1);
 	}
-	return count;
+	return (count);
 }
 
 /**
@@ -27,5 +27,5 @@ unsigned int count_bits(int num)
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	return count_bits(n ^ m);
+	return (count_bits(n ^ m));
 }
