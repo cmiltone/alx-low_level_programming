@@ -2,6 +2,8 @@
 
 /**
  * print_dlistint - prints all elemnets of a list
+ * @h: list
+ * Return: length of list
 */
 
 size_t print_dlistint(const dlistint_t *h)
