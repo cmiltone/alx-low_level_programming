@@ -2,6 +2,8 @@
 
 /**
  * sum_dlistint - sums data in list
+ * @head: list
+ * Return: int
 */
 
 int sum_dlistint(dlistint_t *head)
