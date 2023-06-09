@@ -5,10 +5,11 @@
  * @ht: hash table
  * @key: key
  * @value: value
+ * Return: 1 on success, 0 otherwise
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index = key_index((const unsigned char*)key, ht->size);
+	unsigned long int index = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *node = malloc(sizeof(hash_node_t));
 
 	if (node == NULL)
@@ -30,10 +31,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		(*ht->array[index]).key = (char *)key;
 		(*ht->array[index]).value = (char *)value;
 	}
-	/*(void)key;
-	(void)value;
-	(void)ht;
-	(void)index; */
 
 	return (1);
 }
