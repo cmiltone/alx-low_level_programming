@@ -5,6 +5,7 @@
  * with a key in hash table
  * @ht: hash table
  * @key: the key
+ * Return: the value
 */
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
