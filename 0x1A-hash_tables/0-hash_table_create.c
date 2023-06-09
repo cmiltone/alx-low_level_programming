@@ -12,10 +12,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned long int i = 0;
 
 	if (hash_table == NULL)
-		return NULL;
+		return (NULL);
 
 	hash_table->size = size;
-	hash_table->array = (hash_node_t**)calloc(hash_table->size, sizeof(hash_node_t*));
+	hash_table->array = (hash_node_t **)
+		calloc(hash_table->size, sizeof(hash_node_t *));
 	while (i < size)
 	{
 		hash_table->array[i] = NULL;
