@@ -15,7 +15,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return NULL;
 
 	hash_table->size = size;
-	hash_table->array = (hash_node_t**)calloc(hash_table->size, sizeof(hash_node_t));
+	hash_table->array = (hash_node_t**)calloc(hash_table->size, sizeof(hash_node_t*));
 	while (i < size)
 	{
 		hash_table->array[i] = NULL;
