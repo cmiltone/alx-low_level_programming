@@ -1,6 +1,7 @@
-CC := gcc
-SRC := $(wildcard *.c)
-all: build_executable
+.PHONY = all
 
-build_executable:
+CC	= gcc
+SRC	:= $(wildcard *.c)
+
+all: $(SRC) m.h
 	$(CC) $(SRC) -o school
