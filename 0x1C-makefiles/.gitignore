@@ -3,3 +3,6 @@ m.h
 main.c
 school.c
 school
+
+__pycache__
+5-main.py
